@@ -1,0 +1,25 @@
+{
+  "name": "atom-jscrambler",
+  "main": "./lib/atom-jscrambler",
+  "version": "0.0.0",
+  "description": "Protect your source code with JScrambler",
+  "author": {
+    "name": "magalhas",
+    "email": "magalhas@gmail.com"
+  },
+  "activationEvents": [
+    "jscrambler:obfuscate:project",
+    "jscrambler:obfuscate:file"
+  ],
+  "repository": "https://github.com/auditmark/atom-jscrambler",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+    "glob": "^4.0.5",
+    "jscrambler": "^0.5.8",
+    "q": "^1.0.1",
+    "underscore": "^1.6.0"
+  }
+}

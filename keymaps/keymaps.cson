@@ -1,0 +1,3 @@
+'.workspace':
+  'cmd-shift-o': 'jscrambler:obfuscate:file'
+  'cmd-alt-shift-o': 'jscrambler:obfuscate:project'

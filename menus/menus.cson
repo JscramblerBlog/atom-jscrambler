@@ -1,0 +1,18 @@
+'context-menu':
+  '.overlayer':
+    'JScrambler':
+      'File': 'jscrambler:obfuscate:file'
+      'Project': 'jscrambler:obfuscate:project'
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'JScrambler'
+      'submenu': [
+        { 'label': 'File', 'command': 'jscrambler:obfuscate:file' }
+        { 'label': 'Project', 'command': 'jscrambler:obfuscate:project' }
+      ]
+    ]
+  }
+]
