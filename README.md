@@ -18,7 +18,7 @@ You can also find this options in the contextual and packages menus.
         'secretKey': ''
       'params':
   	    'expiration_date': '2199-01-01'
-  	    'rename_local': '%DEFAULT%''
+  	    'rename_local': '%DEFAULT%'
   	    'whitespace': '%DEFAULT%'
 
 This configuration must be placed in your Atom's `config.cson` file (under Atom -> Open Your Config). You can find all parameters documentation in [here](https://github.com/auditmark/node-jscrambler).
