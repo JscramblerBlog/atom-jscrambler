@@ -1,5 +1,5 @@
 {
-  "name": "atom-jscrambler",
+  "name": "jscrambler",
   "main": "./lib/atom-jscrambler",
   "version": "0.1.0",
   "description": "Protect your source code with JScrambler",
