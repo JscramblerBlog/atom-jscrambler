@@ -7,8 +7,8 @@ Q = require 'q'
 
 module.exports =
   activate: ->
-    atom.workspaceView.command 'jscrambler:obfuscate:file', => @obfuscate 'file'
-    atom.workspaceView.command 'jscrambler:obfuscate:project', => @obfuscate 'project'
+    atom.workspaceView.command 'jscrambler:obfuscate-file', => @obfuscate 'file'
+    atom.workspaceView.command 'jscrambler:obfuscate-project', => @obfuscate 'project'
 
   obfuscate: (type) ->
     # Return if an obfuscation is already in progress

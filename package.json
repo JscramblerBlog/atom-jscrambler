@@ -8,8 +8,8 @@
     "email": "magalhas@gmail.com"
   },
   "activationEvents": [
-    "jscrambler:obfuscate:project",
-    "jscrambler:obfuscate:file"
+    "jscrambler:obfuscate-project",
+    "jscrambler:obfuscate-file"
   ],
   "repository": "https://github.com/auditmark/atom-jscrambler",
   "license": "MIT",
