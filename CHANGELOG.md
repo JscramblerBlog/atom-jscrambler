@@ -1,3 +1,9 @@
+## 0.2.1
+* Change command names to follow atom pattern
+
+## 0.2.0
+* Rename atom-jscrambler to jscrambler
+
 ## 0.1.0 - First Release
 * Obfuscate active file
 * Obfuscate entire project
