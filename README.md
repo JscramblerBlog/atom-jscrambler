@@ -1,6 +1,8 @@
-# [atom](https://atom.io/)-jscrambler
+# [atom](https://atom.io/)-[jscrambler](https://jscrambler.com/)
 
-[atom](https://atom.io/) integration with [JScrambler](https://jscrambler.com/)
+[JScrambler](https://jscrambler.com/) is a JavaScript obfuscation tool.
+
+Obfuscate and minify your HTML5 and [Node.js](http://nodejs.org/) applications.
 
 ## Usage
 

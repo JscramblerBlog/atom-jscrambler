@@ -2,7 +2,7 @@
   "name": "jscrambler",
   "main": "./lib/atom-jscrambler",
   "version": "0.2.1",
-  "description": "Protect your source code with JScrambler",
+  "description": "Obfuscate and minify your JavaScript (HTML5 / Node.js) applications",
   "author": {
     "name": "magalhas",
     "email": "magalhas@gmail.com"
