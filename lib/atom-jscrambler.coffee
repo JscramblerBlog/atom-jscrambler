@@ -61,28 +61,29 @@ module.exports =
   _obfuscateProject: (config) ->
     # Paths
     projectPath = atom.project.path
-    filesDest = path.join projectPath, config.filesDest
-    nodeModulesPath = path.join projectPath, 'node_modules/'
-    # Get all files inside of the project
-    glob path.join(projectPath, '**/*'), (err, files) ->
-      if not err
-        # Iterate and filter each file into `filesSrc`
-        filesSrc = files.filter (file) ->
-          file.indexOf(filesDest) isnt 0 and file.indexOf(nodeModulesPath) isnt 0
+    if projectPath?
+      filesDest = path.join projectPath, config.filesDest
+      nodeModulesPath = path.join projectPath, 'node_modules/'
+      # Get all files inside of the project
+      glob path.join(projectPath, '**/*'), (err, files) ->
+        if not err
+          # Iterate and filter each file into `filesSrc`
+          filesSrc = files.filter (file) ->
+            file.indexOf(filesDest) isnt 0 and file.indexOf(nodeModulesPath) isnt 0
 
-        # Prepare options and JScramble
-        options =
-          params: (config.params? and _.extend config.params, {cwd: projectPath}) or {cwd: projectPath}
-          filesSrc: filesSrc
-          filesDest: filesDest
+          # Prepare options and JScramble
+          options =
+            params: (config.params? and _.extend config.params, {cwd: projectPath}) or {cwd: projectPath}
+            filesSrc: filesSrc
+            filesDest: filesDest
 
-        # Notify the user
-        @notificationView = new NotificationView
+          # Notify the user
+          @notificationView = new NotificationView
 
-        @promise = jScrambler
-          .process _.extend {}, config, options
-          .catch => @onError()
-          .fin =>
-            # Notify the user, again, but in another way
-            @notificationView.destroy()
-            delete @notificationView
+          @promise = jScrambler
+            .process _.extend {}, config, options
+            .catch => @onError()
+            .fin =>
+              # Notify the user, again, but in another way
+              @notificationView.destroy()
+              delete @notificationView
