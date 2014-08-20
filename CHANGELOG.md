@@ -1,3 +1,6 @@
+## 0.2.2
+* Better descriptions
+
 ## 0.2.1
 * Change command names to follow atom pattern
 
