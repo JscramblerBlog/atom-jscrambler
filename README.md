@@ -6,8 +6,8 @@ Obfuscate and minify your HTML5 and [Node.js](http://nodejs.org/) applications.
 
 ## Usage
 
-* Hit Cmd+Shift+O to scramble the currently active file
-* Hit Cmd+Shift+Option+O to scramble the entire project
+* Hit Ctrl+Shift+O to scramble the currently active file
+* Hit Ctrl+Shift+Option+O to scramble the entire project
 
 You can also find this options in the contextual and packages menus.
 

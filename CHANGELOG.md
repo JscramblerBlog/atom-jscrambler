@@ -1,3 +1,6 @@
+## 0.2.3
+* Change hotkeys to achieve windows compatibility
+
 ## 0.2.2
 * Better descriptions
 
