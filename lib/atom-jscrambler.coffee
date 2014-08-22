@@ -49,12 +49,13 @@ module.exports =
         filesSrc: [currFilePath]
         filesDest: filesDest
 
+      # Notify the user
       @notificationView = new NotificationView
 
       @promise = jScrambler
         .process _.extend {}, config, options
-        .fail (error) => @onError(error)
-        .fin =>
+        .catch (error) => @onError(error)
+        .finally =>
           @notificationView.destroy()
           delete @notificationView
 
@@ -65,7 +66,7 @@ module.exports =
       filesDest = path.join projectPath, config.filesDest
       nodeModulesPath = path.join projectPath, 'node_modules/'
       # Get all files inside of the project
-      glob path.join(projectPath, '**/*'), (err, files) ->
+      glob path.join(projectPath, '**/*'), (err, files) =>
         if not err
           # Iterate and filter each file into `filesSrc`
           filesSrc = files.filter (file) ->
@@ -82,8 +83,8 @@ module.exports =
 
           @promise = jScrambler
             .process _.extend {}, config, options
-            .catch => @onError()
-            .fin =>
+            .catch (error) => @onError(error)
+            .finally =>
               # Notify the user, again, but in another way
               @notificationView.destroy()
               delete @notificationView

@@ -1,5 +1,6 @@
 ## 0.2.3
 * Change hotkeys to achieve windows compatibility
+* Fix project obfuscation/scrambling was not outputting any errors when they occurred
 
 ## 0.2.2
 * Better descriptions
