@@ -1,3 +1,6 @@
+## 0.2.4
+* Fix typo on README
+
 ## 0.2.3
 * Change hotkeys to achieve windows compatibility
 * Fix project obfuscation/scrambling was not outputting any errors when they occurred
