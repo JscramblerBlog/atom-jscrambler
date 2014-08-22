@@ -1,7 +1,7 @@
 {
   "name": "jscrambler",
   "main": "./lib/atom-jscrambler",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Obfuscate, minify and optimize your JavaScript (HTML5 / Node.js) applications",
   "author": {
     "name": "magalhas",
