@@ -17,9 +17,9 @@
     "atom": ">0.50.0"
   },
   "dependencies": {
-    "glob": "^4.0.5",
-    "jscrambler": "^0.5.9",
-    "q": "^1.0.1",
-    "underscore": "^1.6.0"
+    "glob": "^4.3.2",
+    "jscrambler": "^0.6.0",
+    "q": "^1.1.2",
+    "underscore": "^1.7.0"
   }
 }
