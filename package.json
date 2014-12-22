@@ -11,7 +11,7 @@
     "jscrambler:obfuscate-project",
     "jscrambler:obfuscate-file"
   ],
-  "repository": "https://github.com/auditmark/atom-jscrambler",
+  "repository": "https://github.com/jscrambler/atom-jscrambler",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
