@@ -28,7 +28,7 @@ your `config.cson` file (under Atom -> Open Your Config).
 
 This will configure `atom-jscrambler` for all projects. If you wish to have
 specific parameters for your project create a `.jscramblerrc` on your project
-folder will the structure described
+folder with the structure described
 [here](https://github.com/jscrambler/node-jscrambler#rc-configuration)
 (everything is optional).
 
