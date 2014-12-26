@@ -1,6 +1,8 @@
 _ = require 'underscore'
+fs = require 'fs'
 glob = require 'glob'
 jScrambler = require 'jscrambler'
+merge = require 'lodash.merge'
 NotificationView = require './notification-view'
 path = require 'path'
 Q = require 'q'
@@ -13,6 +15,12 @@ module.exports =
       secret: ''
 
   activate: ->
+    # Load `.jscramblerrc` from project directory and assign it to `jScrambler`
+    # We're doing this because `rc` is not working properly inside `atom`
+    configPath = path.join atom.project.path, '.jscramblerrc'
+    if fs.statSync configPath
+      jScrambler.config = merge(jScrambler.config, JSON.parse(fs.readFileSync configPath, encoding: 'utf-8'))
+    # `atom` commands
     atom.workspaceView.command 'jscrambler:obfuscate-file', => @obfuscate 'file'
     atom.workspaceView.command 'jscrambler:obfuscate-project', => @obfuscate 'project'
 
