@@ -12,12 +12,17 @@ Obfuscate and minify your HTML5 and [Node.js](http://nodejs.org/) applications.
 You can also find this options in the contextual and packages menus.
 
 ## Configuration
-    'jScrambler':
+You can either use your `atom` configuration or place a `.jscramblerrc` file as
+described in [here](https://github.com/jscrambler/node-jscrambler#rc-configuration).
+The `atom` configuration can be set in your Settings view or directly into
+your `config.cson` file.
+
+    'jscrambler':
       # Must be relative to the project
       'filesDest': './dist'
       'keys':
-        'accessKey': ''
-        'secretKey': ''
+        'access': ''
+        'secret': ''
       'params':
   	    'expiration_date': '2199-01-01'
   	    'rename_local': '%DEFAULT%'

@@ -6,6 +6,12 @@ path = require 'path'
 Q = require 'q'
 
 module.exports =
+  configDefaults:
+    filesDest: ''
+    keys:
+      access: ''
+      secret: ''
+
   activate: ->
     atom.workspaceView.command 'jscrambler:obfuscate-file', => @obfuscate 'file'
     atom.workspaceView.command 'jscrambler:obfuscate-project', => @obfuscate 'project'
@@ -15,7 +21,7 @@ module.exports =
     return if @promise? and not @promise.isFulfilled()
 
     # If there's no configuration notify the user
-    if not config = atom.config.settings.jScrambler
+    if not config = atom.config.settings.jscrambler
       deferred = Q.defer()
       @promise = deferred.promise
       @notificationView = new NotificationView
@@ -25,8 +31,10 @@ module.exports =
         .then =>
           @notificationView.destroy() and delete @notificationView and @promise.resolve()
     # Else obfuscate
-    else if type is 'file' then @_obfuscateFile config
-    else if type is 'project' then @_obfuscateProject config
+    else
+      config.keys = accessKey: config.keys.access, secretKey: config.keys.secret
+      if type is 'file' then @_obfuscateFile config
+      if type is 'project' then @_obfuscateProject config
 
   onError: (error) ->
     # Notify the user that there was an error and wait
