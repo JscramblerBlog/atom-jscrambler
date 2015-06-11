@@ -1,14 +1,13 @@
 {
   "name": "jscrambler",
   "main": "./lib/atom-jscrambler",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "Obfuscate, minify and optimize your JavaScript (HTML5 / Node.js) applications",
   "author": {
     "name": "magalhas",
     "email": "magalhas@gmail.com"
   },
   "activationCommands": {
-    "atom-workspace": "jscrambler:obfuscate-project",
     "atom-workspace": "jscrambler:obfuscate-file"
   },
   "repository": "https://github.com/jscrambler/atom-jscrambler",
