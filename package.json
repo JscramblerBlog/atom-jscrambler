@@ -7,10 +7,10 @@
     "name": "magalhas",
     "email": "magalhas@gmail.com"
   },
-  "activationEvents": [
-    "jscrambler:obfuscate-project",
-    "jscrambler:obfuscate-file"
-  ],
+  "activationCommands": {
+    "atom-workspace": "jscrambler:obfuscate-project",
+    "atom-workspace": "jscrambler:obfuscate-file"
+  },
   "repository": "https://github.com/jscrambler/atom-jscrambler",
   "license": "MIT",
   "engines": {

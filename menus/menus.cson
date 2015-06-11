@@ -1,9 +1,12 @@
 'context-menu':
-  '.overlayer':
-    'JScrambler':
-      'File': 'jscrambler:obfuscate-file'
-      'Project': 'jscrambler:obfuscate-project'
-
+  '.tree-view .file > .name': [{
+    'label': 'Obfuscate file using JScrambler'
+    'command': 'jscrambler:obfuscate-file'
+  }]
+  '.tree-view .directory > .header > .name': [{
+    'label': 'Obfuscate project using JScrambler',
+    'command': 'jscrambler:obfuscate-project'
+  }]
 'menu': [
   {
     'label': 'Packages'
